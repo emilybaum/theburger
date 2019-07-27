@@ -1,0 +1,40 @@
+<h1>Cats!</h1>
+
+<h2>This should be about burgers</h2>
+
+<ul>
+    {{#each burger}}
+    {{#unless devoured}}
+
+    {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
+    {{> burgers/burger-block sleep=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>The Ultimate Burger List</h2>
+
+<ul>
+    {{#each burger}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="ca">Cat Name:</label>
+        <input type="text" id="ca" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="devoured">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> devoured!<br>
+        <input type="radio" name="devoured" value="0"> Awake
+    </div>
+
+    <button type="submit">Add Burger</button>
+</form>
