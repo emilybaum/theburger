@@ -1,7 +1,7 @@
 var connection = require("../config/connection.js");
 
 var orm = {
-    selectAll: function(tableInput, cb) {
+    selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
@@ -17,7 +17,7 @@ var orm = {
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += vals.toString();
+        queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
         console.log(queryString);
@@ -29,8 +29,8 @@ var orm = {
 
             cb(result);
         });
-
     },
+    // An example of objColVals would be {name: panther, sleepy: true}
     updateOne: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
@@ -47,8 +47,21 @@ var orm = {
 
             cb(result);
         });
+    },
+    deleteOne: function (table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
     }
-}
+};
 
 module.exports = orm;
 
