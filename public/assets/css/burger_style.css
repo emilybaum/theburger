@@ -1,5 +1,10 @@
 /* 
 font-family: 'Oswald', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+  weight: 400, 500
+font-family: 'Open Sans', sans-serif;
+  weight: 300, 500
+font-family: 'Pacifico', cursive;
  */
 
 body {
@@ -48,15 +53,21 @@ li {
 }
 
 .title {
+  font-size: 50px;
   text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-weight:500;
 }
 
 .sub-text {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 .subtitle {
   text-align: center;
   color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:400;
 }
 
 .holds-input {
@@ -67,6 +78,10 @@ li {
   padding: 1rem;
   background-color: #00000050;
   border: #00000025 solid 3px;
+}
+
+label {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .input-item {
