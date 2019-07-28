@@ -1,12 +1,11 @@
-
+/* 
+font-family: 'Oswald', sans-serif;
+ */
 
 body {
   background-image: url("../img/burger-tile.png");
   background-repeat: repeat;
   background-position: center;
-  /* width: 100%; */
-  /* height: 100%; */
-  /* background-attachment: fixed; */
   background-attachment: fixed;
   background-color: gray;
 }
@@ -79,7 +78,7 @@ li {
   display: flex;
   justify-content: space-between;
   border: #00000025 solid 3px;
-  overflow: hidden;
+  /* word-wrap: break-word; */
 }
 
 .burger-buttons {
@@ -98,3 +97,13 @@ li {
   background-color: green;
 }
 
+.burger-name {
+   word-wrap: break-word;
+}
+
+#footer-text {
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+}

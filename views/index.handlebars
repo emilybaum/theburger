@@ -1,7 +1,7 @@
 
     <div class="row">
         <div class="mx-auto col-sm-6">
-            <h1 class="title">The Ultimate Burger List</h1>
+            <h1 class=" title">The Ultimate Burger List</h1>
             <p class="sub-text">Enter the name of any burger to add it to the list, then you can click <strong>Eat it now!</strong> to move that burger to the consumed list.</p> 
             <p class="sub-text">And, you always have the option to <strong>remove</strong> any burger too.</p>
         </div>
@@ -32,8 +32,6 @@
                     <div>
                         {{#each burgers}}
                         {{#unless devoured}}
-            
-                        {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
                         {{> bfolder/burger-block devoured=true}}
                         {{/unless}}
                         {{/each}}
@@ -42,7 +40,6 @@
             
                 <div class=" col-sm-5 holds-half">
                     <h2 class="subtitle">Burgers you consumed</h2>
-            
                     <div>
                         {{#each burgers}}
                         {{#if devoured}}
