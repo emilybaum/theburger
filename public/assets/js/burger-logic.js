@@ -4,18 +4,9 @@ $(function () {
         var id = $(this).data("id");
         var newDevoured = $(this).data("newdevoured");
 
-        switch newDevoured
-            case "true":
-
-        console.log("---------------------")
-        console.log(newDevoured)
-
         var newDevouredState = {
             devoured: newDevoured
         };
-
-        console.log("---------------------")
-        console.log(newDevouredState);
 
         // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
@@ -34,17 +25,10 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        console.log("button clicked")
-
         var newBurger = {
             burger_name: $("#ca").val().trim(),
             devoured: "0"
         };
-
-        console.log("******************************************")
-        console.log("newBurger");
-        console.log(newBurger)
-        console.log("******************************************")
 
 
         // Send the POST request.

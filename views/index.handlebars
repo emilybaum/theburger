@@ -1,47 +1,71 @@
-<h1>Burgers!</h1>
 
-<h2>The Ultimate Burger List</h2>
-
-<div class="holds-all-burgers">
-    <div class="holds-half">
-        <h2>New Burgers</h2>
-        <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-
-            {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
-            {{> bfolder/burger-block devoured=true}}
-            {{/unless}}
-            {{/each}}
-        </ul>
+    <div class="row">
+        <div class="mx-auto col-sm-6">
+            <h1 class="title">The Ultimate Burger List</h1>
+            <p class="sub-text">Enter the name of any burger to add it to the list, then you can click <strong>Eat it now!</strong> to move that burger to the consumed list.</p> 
+            <p class="sub-text">And, you always have the option to <strong>remove</strong> any burger too.</p>
+        </div>
     </div>
 
-    <div class="holds-half">
-        <h2>Burgers you consumed</h2>
-
-        <ul>
-            {{#each burgers}}
-            {{#if devoured}}
-            {{> bfolder/burger-block devoured=false}}
-            {{/if}}
-            {{/each}}
-        </ul>
-    </div>
-</div>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" id="ca" name="burger_name">
+    <div class="row">
+        <div class="col-sm">
+            <div class="holds-input">
+                <h2 class="input-item subtitle">Add a Burger to the list</h2>
+                <form class="create-form input-item">
+            
+                    <div class="form-group">
+                        <label for="ca">Burger Name:</label>
+                        <input type="text" id="ca" name="burger_name">
+                    </div>
+            
+                    <button type="submit">Add Burger</button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    {{!-- <div class="form-group">
-        <label for="devoured">Devoured?</label><br>
-        <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-        <input type="radio" name="devoured" value="0"> Awake
-    </div> --}}
+    <div class="row holds-all-burgers">
+                  
+            
+                <div class=" col-sm-5 holds-half">
+                    <h2 class="subtitle">New Burgers</h2>
+                    <div>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+            
+                        {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
+                        {{> bfolder/burger-block devoured=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            
+                <div class=" col-sm-5 holds-half">
+                    <h2 class="subtitle">Burgers you consumed</h2>
+            
+                    <div>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        {{> bfolder/burger-block devoured=false}}
+                        {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+          
+            
+    </div>
 
-    <button type="submit">Add Burger</button>
-</form>
+
+
+
+
+
+
+
+    
+
+    
+
+
+  
+
