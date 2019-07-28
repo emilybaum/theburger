@@ -9,6 +9,7 @@ var burger = {
     },
     // The variables cols and vals are arrays.
     createOne: function (cols, vals, cb) {
+        console.log("burgers.js createOne is working")
         orm.createOne("burgers", cols, vals, function (res) {
             cb(res);
         });

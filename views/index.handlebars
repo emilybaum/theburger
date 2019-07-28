@@ -1,26 +1,33 @@
 <h1>Burgers!</h1>
 
-<h2>This should be about burgers</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-
-        {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
-            {{> bfolder/burger-block devoured=false}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
 <h2>The Ultimate Burger List</h2>
 
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> bfolder/burger-block devoured=false}}
-    {{/if}}
-    {{/each}}
-</ul>
+<div class="holds-all-burgers">
+    <div class="holds-half">
+        <h2>New Burgers</h2>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+
+            {{!-- ELYZA: this is the folder that the cat.block is in for partials --}}
+            {{> bfolder/burger-block devoured=true}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="holds-half">
+        <h2>Burgers you consumed</h2>
+
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> bfolder/burger-block devoured=false}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">

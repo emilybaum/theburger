@@ -25,6 +25,7 @@ router.post("/api/burgers", function (req, res) {
             // Send back the ID of the new quote
             res.json({ id: result.insertId });
         });
+    console.log(req.body.burger_name, req.body.devoured)
 });
 
 router.put("/api/burgers/:id", function (req, res) {
@@ -45,7 +46,9 @@ router.put("/api/burgers/:id", function (req, res) {
 });
 
 router.delete("/api/burgers/:id", function (req, res) {
+    console.log("delete on hte burgers_controllers.js")
     var condition = "id = " + req.params.id;
+    console.log(condition)
 
     burger.deleteOne(condition, function (result) {
         if (result.affectedRows == 0) {
