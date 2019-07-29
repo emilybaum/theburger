@@ -20,4 +20,4 @@ Whenever a user submits a burger's name, the app will display the burger on the 
 * MySQL
 * Handlebars
 
-*Deployed to Heroku: https://infinite-lake-29087.herokuapp.com/ *
+_Deployed to Heroku: https://infinite-lake-29087.herokuapp.com/ _
