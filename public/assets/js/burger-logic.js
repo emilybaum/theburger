@@ -60,8 +60,5 @@ $(function () {
         );
     });
 
-    function animation() {
-
-    }
 
 });

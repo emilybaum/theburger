@@ -1,10 +1,11 @@
 /* 
-font-family: 'Oswald', sans-serif;
-font-family: 'Ubuntu', sans-serif;
-  weight: 400, 500
-font-family: 'Open Sans', sans-serif;
-  weight: 300, 500
-font-family: 'Pacifico', cursive;
+GOOGLE FONTS
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+    weight: 400, 500
+  font-family: 'Open Sans', sans-serif;
+    weight: 300, 500
+  font-family: 'Pacifico', cursive;
  */
 
 body {
@@ -20,12 +21,6 @@ body {
   border: #00000025 solid 3px;
   margin: 2rem;
   padding: 1rem;
-}
-
-
-.main-content {
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 li {
@@ -57,12 +52,16 @@ li {
   text-align: center;
   font-family: 'Pacifico', cursive;
   font-weight:500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .sub-text {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  width: 75%;
 }
+
 .subtitle {
   text-align: center;
   color: white;
@@ -109,7 +108,11 @@ label {
 }
 
 .change-devoured:hover {
-  background-color: green;
+  background-color: #cec3b6;
+}
+
+.submit-button:hover {
+  background-color: #cec3b6;
 }
 
 .burger-name {
