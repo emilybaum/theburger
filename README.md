@@ -5,10 +5,9 @@ The Ultimate Burger List! is an interactive app that lets users input the names 
 Whenever a user submits a burger's name, the app will display the burger on the left side of the page -- waiting to be eaten. Each burger in the waiting area also has a **Eat it now!** button. When the user clicks it, the burger will move to the right side of the page. This app will store every burger in a database, whether eaten or not. You also have the ability to **Remove** a burger at any time too.
 
 ![Demo](/public/assets/img/demo-theburger.gif)
-Format: ![gif-demo](url)
 
 ## Technology used
-Tech
+**Tech**
 * JavaScript
 * jQuery
 * HTML/CSS
@@ -16,11 +15,9 @@ Tech
 * api and ajax requests
 * ORM frameworks
 
-Packages
+**Packages**
 * Express
 * MySQL
 * Handlebars
 
-Deployed to Heroku: https://infinite-lake-29087.herokuapp.com/ 
-
-
+*Deployed to Heroku: https://infinite-lake-29087.herokuapp.com/ *
